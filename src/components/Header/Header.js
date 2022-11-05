@@ -35,8 +35,9 @@ const Wrapper = styled.header`
 
 const InnerWrapper = styled(MaxWidthWrapper)`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 48px;
+  gap: 10px 48px;
   padding: 16px 32px;
 `;
 
