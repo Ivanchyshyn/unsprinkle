@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background: hsl(0deg 0% 1%);
+  background: rgb(1 1 1);
 `;
 
 const HeroImage = styled.img`
