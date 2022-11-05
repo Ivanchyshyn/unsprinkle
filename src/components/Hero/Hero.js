@@ -2,10 +2,18 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 const Hero = () => {
+  const heroImgNoExt = '/images/hero-img';
+  const sets = ['', '@2x', '@3x'];
+  const avifSrcSet = sets.map((suffix, index) => `${heroImgNoExt}${suffix}.avif ${index+1}x`).join(', ');
+  const jpgSrcSet = sets.map((suffix, index) => `${heroImgNoExt}${suffix}.jpg ${index+1}x`).join(', ');
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
-      <Swoop src="/swoop.svg" />
+      <picture>
+        <source type="image/avif" srcSet={avifSrcSet} />
+        <source type="image/jpg" srcSet={jpgSrcSet} />
+        <HeroImage src={`${heroImgNoExt}.jpg`} alt="A hero cat on a black background" />
+      </picture>
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };
